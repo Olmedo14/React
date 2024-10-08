@@ -1,0 +1,11 @@
+.cartwidget {
+    display: flex;
+    padding: 10px;
+}
+.cartwidget p{
+    color: rgb(228, 159, 12);
+}
+.icon-cart {
+    font-size: 70px;
+    color: white;
+}
