@@ -1,9 +1,14 @@
 import React, { useEffect } from 'react';
 import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
 import NavBar from './components/NavBar/NavBar';
 import Modal from './components/Modal/Modal.jsx';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.jsx';
+import Cart from './components/Cart/Cart'
+import Checkout from './components/Checkout/Checkout'
+import { ToastContainer } from 'react-toastify';
+import { CartProvider } from './context/CartContext'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -21,14 +26,18 @@ function App() {
     <div>
 
       <BrowserRouter>
-        <NavBar />
+        <CartProvider>
+          <NavBar />
+          <ToastContainer />
 
-        <Routes>
-          <Route path='/' element={ <ItemListContainer greeting="¡Hola, bienvenido a nuestra tienda!" /> }/>
-          <Route path='/detail/:idProduct' element= { <ItemDetailContainer /> }/>
-        </Routes>
+          <Routes>
+            <Route path="/" element={<ItemListContainer saludo={"Hola Mundo!!"} />} />
+            <Route path="/detail/:idProduct" element={<ItemDetailContainer />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
+          </Routes>
 
-        <Modal />
+        </CartProvider>
       </BrowserRouter>
 
     </div>
