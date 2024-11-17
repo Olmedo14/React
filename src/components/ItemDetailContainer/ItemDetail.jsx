@@ -21,14 +21,14 @@ const ItemDetail = ({ product }) => {
         <div className="secondary-images">
         </div>
         <div className="card-detalle-main">
-          <img src={product.image} width={400} alt="" />
+          <img src={product.image} width={550} alt="" />
         </div>
       </div>
 
       <div className="card-detalle">
-        <h2>{product.name}</h2>
-        <p>{product.description}</p>
-        <p>Precio: ${product.price}</p>
+        <h2 className="card-detalle1">{product.name}</h2>
+        <p className="card-detalle2">{product.description}</p>
+        <p className="card-detalle3">Precio: ${product.price}</p>
         {
           showItemCount === true ? (
             <ItemCount stock={product.stock} addProduct={addProduct} />

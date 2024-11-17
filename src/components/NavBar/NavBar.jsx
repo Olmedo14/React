@@ -15,13 +15,10 @@ const NavBar = () => {
                     <Link to="/">Inicio</Link>
                 </li>
                 <li>
-                    <Link to="/category/Productos">Productos</Link>
+                    <Link to="/category/Suscripciones">Suscripciones</Link>
                 </li>
                 <li>
                     <Link to="/category/Dudas">Dudas</Link>
-                </li>
-                <li>
-                    <Link to="/category/Nosotros">Nosotros</Link>
                 </li>
             </ul>
             <CartWidget />

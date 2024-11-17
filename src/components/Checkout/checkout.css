@@ -1,0 +1,32 @@
+.buy-end-info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.buy-end-info h2{
+    color: rgb(228, 159, 12);
+
+}
+
+.buy-end-info p{
+    color: rgb(0, 204, 255);
+    font-size: 20px;
+    margin-top: 10px;
+}
+.buy-end-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 75px;
+    background-color: rgb(45, 6, 6);
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 5px;
+    color: rgb(201, 65, 65);
+    font-size: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+}

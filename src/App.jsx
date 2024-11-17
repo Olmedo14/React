@@ -10,6 +10,7 @@ import Checkout from './components/Checkout/Checkout'
 import { ToastContainer } from 'react-toastify';
 import { CartProvider } from './context/CartContext'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Faq from './components/Faq/Faq.jsx';
 
 function App() {
 
@@ -35,7 +36,11 @@ function App() {
             <Route path="/detail/:idProduct" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
+            <Route path="/category/Dudas" element= {<Faq />} />
+            <Route path="/category/Suscripciones" element={<ItemListContainer saludo={"Hola Mundo!!"} />} />
           </Routes>
+
+          <Modal />
 
         </CartProvider>
       </BrowserRouter>

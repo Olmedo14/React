@@ -15,12 +15,12 @@
 }
 .cards p{
     font-size: 21px;
-    color: red;
+    color: rgb(228, 159, 12);
     margin-top: -5px;
 }
 
 
 .btn-detalle{
-    color: pink;
+    color: rgb(0, 204, 255);
     text-decoration: none;
 }

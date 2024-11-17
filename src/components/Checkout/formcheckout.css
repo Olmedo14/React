@@ -1,0 +1,28 @@
+.form-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form-info{
+    color: rgb(228, 159, 12);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.form-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 75px;
+    background-color: rgb(45, 6, 6);
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 5px;
+    color: rgb(201, 65, 65);
+    font-size: 20px;
+    margin-top: 40px;
+
+}

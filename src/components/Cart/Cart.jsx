@@ -7,12 +7,11 @@ import { BsFillTrash3Fill } from "react-icons/bs"
 const Cart = () => {
   const { cart, totalPrice, deleteProductById, deleteCart } = useContext(CartContext)
 
-  //Early return
   if( cart.length === 0 ){
     return(
       <div className="empty-cart">
-        <h2 className="title-empty-cart">Oppps...No hay productos en el carrito 😥</h2>
-        <Link to="/" className="button-home-empty-cart" >Volver al inicio</Link>
+        <h2>No hay productos en el carrito 🤔</h2>
+        <Link to="/" className="empty-cart-btn">Volver al inicio</Link>
       </div>
     )
   }
@@ -24,10 +23,10 @@ const Cart = () => {
         cart.map( (productCart) => (
           <div className="item-cart" key={productCart.id}>
             <img className="img-item-cart" src={productCart.image} width={100} alt="" />
-            <p className="text-item-cart">{productCart.name}</p>
-            <p className="text-item-cart">precio c/u: ${productCart.price}</p>
-            <p className="text-item-cart">cantidad: {productCart.quantity}</p>
-            <p className="text-item-cart">precio parcial: ${ productCart.price * productCart.quantity } </p>
+            <p className="text-item-cart1">{productCart.name}</p>
+            <p>precio c/u: ${productCart.price}</p>
+            <p>cantidad: {productCart.quantity}</p>
+            <p>precio parcial: ${ productCart.price * productCart.quantity } </p>
             <button className="delete-item-cart" onClick={ () => deleteProductById(productCart.id) } >
               <BsFillTrash3Fill />
             </button>
@@ -38,7 +37,7 @@ const Cart = () => {
       <div className="info-cart">
         <p className="text-info-cart">Precio total: ${totalPrice()}</p>
         <button className="button-delete-cart" onClick={deleteCart} >Vaciar carrito</button>
-        <Link to="/checkout" >Terminar mi compra</Link>
+        <Link to="/checkout" className="info-cart-finish-btn">Terminar mi compra</Link>
       </div>
     </div>
   )

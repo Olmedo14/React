@@ -7,6 +7,7 @@ import db from "../../db/db.js"
 import { Link } from "react-router-dom"
 import validateForm from "../../utils/validateForm.js"
 import { toast } from "react-toastify"
+import "./checkout.css"
 
 const Checkout = () => {
   const [dataForm, setDataForm] = useState({
@@ -73,10 +74,10 @@ const Checkout = () => {
             handleChangeInput={handleChangeInput}
             handleSubmitForm={handleSubmitForm} />
         ) : (
-          <div>
-            <h2>Su orden se subio correctamente!😁</h2>
+          <div className="buy-end-info">
+            <h2>Gracias por tu compra!🧡</h2>
             <p>Porfavor guarde su numero de seguimiento: {idOrder}</p>
-            <Link to="/">Volver al inicio</Link>
+            <Link to="/" className="buy-end-btn">Volver al inicio</Link>
           </div>
         )
       }
